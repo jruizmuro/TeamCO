@@ -1030,7 +1030,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("../img/teamco3.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1062,13 +1062,12 @@ section {
 
 .testimonials .testimonial-item .testimonial-img {
   width: 100px;
-  border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
 }
 
 .testimonials .testimonial-item h3 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #fff;
@@ -1366,6 +1365,48 @@ section {
     transform: rotate(360deg);
   }
 }
+
+/*--------------------------------------------------------------
+# Galeria
+--------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .container{
+	width:90%
+	margin:10px auto;
+} */
+.portfolio-menu {
+  text-align: center;
+}
+
+.portfolio-menu ul li {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  -webkit-transition: all 05s ease;
+  -moz-transition: all 05s ease;
+  -ms-transition: all 05s ease;
+  -o-transition: all 05s ease;
+  transition: all .5s ease;
+}
+
+.portfolio-item .item {
+  /*width:303px;*/
+  float: left;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Trabajadores
+--------------------------------------------------------------*/
+
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
