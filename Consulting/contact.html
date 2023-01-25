@@ -37,17 +37,17 @@
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">TC<span>.</span></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#">Contacto</a></li>
+                    <li><a class="nav-link scrollto" href="instalation.html">Instalaciones y empleados</a></li>
+                    <li><a class="nav-link scrollto" href="prices.html">Precios</a></li>
+                    <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -57,6 +57,104 @@
     </header><!-- End Header -->
 
     <main id="main">
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="">
+                <p></p>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+
+
+                <div>
+                    <figure>
+                        <img width="100%" src="assets/img/oficina.jpeg" alt="">
+                    </figure>
+                </div>
+
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Dirección:</h4>
+                                <p>P.º del Prior, 97, 26004 Logroño, La Rioja</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>teamco@enterprise.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Teléfono:</h4>
+                                <p>941 256 957</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"
+                                        required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="surname" class="form-control" id="surname"
+                                        placeholder="Apellido" required>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="address" class="form-control" id="address"
+                                        placeholder="Dirección" required>
+                                </div>
+
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder=" Email" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="tel" class="form-control" name="Telefono" id="telefono"
+                                        pattern="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}" placeholder="Telefono"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+
+                    </div>
+
+                </div><br>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.0200723376047!2d-2.432158084540226!3d42.46986177917951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aab0dbd9ed72d%3A0xda98798954220d52!2sIES%20Comercio!5e0!3m2!1ses!2ses!4v1673985458129!5m2!1ses!2ses"
+                        width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
 
@@ -88,11 +186,12 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Navegación</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Instalación y empleados</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Precios</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Blog</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Contacto</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="instalation.html">Instalación y
+                                    empleados</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="prices.html">Precios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
                         </ul>
                     </div>
 
@@ -104,7 +203,7 @@
                             </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Asesoramiento financiero particular</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Realización de auditorias contables</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Realización de auditorías contables</a>
                             </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Acciones y créditos</a></li>
                         </ul>
