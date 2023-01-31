@@ -1,7 +1,12 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
-    
+document.addEventListener("DOMContentLoaded", async function () {
+
+    const data = await getData();
+    document.getElementById("nombreMascota").innerText = data.name;
+    document.getElementById("etiquetaMascota").innerText = data.tags[0].name;
+    document.getElementById("estadoMascota").innerText = data.status;
+
     document.getElementById("modificar").addEventListener("click", async function () {
         const form = document.querySelector('#form')
         form.addEventListener('submit', async (event) => {
@@ -46,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("eliminar").addEventListener("click", async function () {
 
-        const data = await deleteData('https://petstore.swagger.io/v2/pet/');
+        const data = await deleteData();
         console.log(data);
 
     });
@@ -63,14 +68,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }).catch(res => console.log(res));
     }
 
-    async function deleteData(url = '') {
-        await fetch(url + 15, {
+    async function deleteData() {
+        await fetch('https://petstore.swagger.io/v2/pet/' + 15, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'application/json'
             }
         }).catch(res => console.log(res));
+    }
+
+    async function getData() {
+        return await fetch('https://petstore.swagger.io/v2/pet/' + 15, {
+            method: 'GET',
+
+        }).catch(res => console.log(res)).then(x => x.json());
+
+
     }
 });
 
