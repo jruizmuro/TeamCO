@@ -27,11 +27,12 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
-  <script src="js/landing.js" type="module"></script>
-  <script src="js/main.js" type="module"></script>
+
   <!-- Template Main CSS Files -->
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <script src="js/register.js"></script>
+
 
   <!-- =======================================================
   * Template Name: ZenBlog - v1.3.0
@@ -54,33 +55,75 @@
       </a>
 
       <div class="position-relative">
-        <button type="button" class="btn btn-dark"><a href="./crear.html" style="color: white">Crear
-            mascota</a></button>
         <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
         <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
         <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
       </div>
-      
+
     </div>
 
   </header><!-- End Header -->
 
   <main id="main">
-    <div class="container p-4">
-      <div class="row justify-content-between" id="container">
+    <div class="container" id="registro">
+
+      <h3 class="d-flex justify-content-center p-5">Register</h3>
 
 
 
+      <form method="GET" action="index.html" id="form" class="row g-3 needs-validation d-flex justify-content-center"
+        novalidate autocomplete="on">
+        <fieldset>
+          <div class="col-md-6 mx-md-auto m-2">
+            <legend>Datos personales</legend>
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input autocomplete="name" type="text" class="form-control" id="validationCustom01" required>
+            <div class="valid-feedback">
+              ¡Correcto!
+            </div>
+            <div class="invalid-feedback">
+              Elige un nombre valido.
+            </div>
+          </div>
+          <div class="col-md-6 mx-md-auto m-2">
+            <label for="validationCustom02" class="form-label">Email</label>
+            <input autocomplete="given-name" type="email" class="form-control" id="validationCustom02" required>
+            <div class="valid-feedback">
+              ¡Correcto!
+            </div>
+            <div class="invalid-feedback">
+              Por favor escriba un email valido.
+            </div>
+          </div>
 
-      </div>
+          <div class="col-md-6 mx-md-auto m-2">
+            <label for="validationCustom03" class="form-label">Username</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="valid-feedback">
+              ¡Correcto!
+            </div>
+            <div class="invalid-feedback">
+              Por favor escriba un nombre de usuario valido.
+            </div>
+          </div>
 
-
-
-
+          <div class="col-md-6 mx-md-auto m-2">
+            <label for="validationCustom04" class="form-label">Password</label>
+            <input type="password" class="form-control" id="validationCustom04" required>
+            <div class="valid-feedback">
+              ¡Correcto!
+            </div>
+            <div class="invalid-feedback">
+              Por favor escriba un password valido.
+            </div>
+          </div>
+        </fieldset>
+        <div class="col-12 d-flex justify-content-center m-2">
+          <button class="btn btn-success" id="register" type="submit">Registrar</button>
+        </div>
+      </form>
 
     </div>
-
-
 
   </main>
 
@@ -95,7 +138,6 @@
             <div class="copyright">
               © Copyright <strong><span>PetShop</span></strong>. All Rights Reserved
             </div>
-
             <div class="credits">
               <!-- All the links in the footer should remain intact. -->
               <!-- You can delete the links only if you purchased the pro version. -->
@@ -103,11 +145,8 @@
               <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
               Designed by <a href="https://bootstrapmade.com/">PetShop Iturriaga</a>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
 
@@ -123,7 +162,8 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
