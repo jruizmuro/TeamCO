@@ -31,7 +31,8 @@
     <!-- Template Main CSS Files -->
     <link href="assets/css/variables.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
-    <script src="js/info.js"></script>
+    <script src="js/info.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
 
     <!-- =======================================================
   * Template Name: ZenBlog - v1.3.0
@@ -68,9 +69,8 @@
     <main id="main">
         <div class="container p-4">
             <div class="row justify-content-center">
-                <div class="card bg-green" style="width: 18rem;">
-                    <img src="https://www.hola.com/imagenes/estar-bien/20191004150785/pastor-aleman-raza-de-perro-caracteristicas/0-728-57/raza-de-perro-pastor-aleman-e.jpg"
-                        class="card-img-top" alt="Foto de la mascota">
+                <div class="card" style="width: 18rem;" id="colorFondo">
+                    <img id="fotoMascota" src="" class="card-img-top" alt="Foto de la mascota">
                     <div class="card-body">
                         <h5 id="nombreMascota" class="card-title color-white"></h5>
                         <p id="etiquetaMascota" class="card-text color-white"></p>
@@ -148,9 +148,9 @@
                                                         <select class="form-select" id="estado-input" name="estado"
                                                             multiple data-allow-new="true">
                                                             <option disabled hidden value="">Elige un estado</option>
-                                                            <option value="disponible">Disponible</option>
-                                                            <option value="reservado">Reservado</option>
-                                                            <option value="vendido">Vendido</option>
+                                                            <option value="available">Disponible</option>
+                                                            <option value="pending">Reservado</option>
+                                                            <option value="sold">Vendido</option>
                                                         </select>
                                                         <div class="invalid-feedback">
                                                             Por favor elige un estado
