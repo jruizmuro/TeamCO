@@ -23,4 +23,31 @@ export function getArrayData() {
 }
 
 
+export async function delUser() {
+    const dataDeleteUser = {
+        "id": 0,
+        "username": "string",
+        "firstName": "string",
+        "lastName": "string",
+        "email": "string",
+        "password": "string",
+        "phone": "string",
+        "userStatus": 0
+    };
+    await fetch('https://petstore.swagger.io/v2/user', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+        },
+        body: JSON.stringify(dataDeleteUser)
+    }).catch(error => {
+        {
+            alert("Error, al eliminar el usuario " + error);
+        }
+    })
+        .then(response => response.json());
+}
+
+
 

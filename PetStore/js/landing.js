@@ -1,11 +1,22 @@
 'use strict';
-import { storeData } from "./main.js";
+import { storeData, delUser } from "./main.js";
 document.addEventListener("DOMContentLoaded", function () {
-
+    nameLog();
     creaDivAPI("available");
     creaDivAPI("pending");
     creaDivAPI("sold");
 
+});
+
+document.getElementById("deleteUser").addEventListener("click", async function () {
+    delUser();
+    sessionStorage.clear();
+    location.href = "login.html";
+});
+
+document.getElementById("closeSession").addEventListener("click", function () {
+    sessionStorage.clear();
+    location.href = "login.html";
 });
 
 
@@ -112,11 +123,13 @@ function creaDivAPI(tipo) {
 
 }
 
-
 function numRandom() {
     return Math.floor(Math.random() * 32) + 1;
 }
 
-
+function nameLog() {
+    let nUser = document.getElementById('nameUser');
+    nUser.textContent = sessionStorage.getItem('user');
+}
 
 
