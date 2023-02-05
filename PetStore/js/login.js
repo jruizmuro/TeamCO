@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", async function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const form = document.getElementById('formulario')
+    const form = document.getElementById('formulario');
     form.addEventListener('submit', async (event) => {
         const usuario = document.getElementById("usuario").value;
         const pass = document.getElementById("pass").value;
@@ -27,32 +27,32 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 
-// const datos = {
-//     "id": 2,
-//     "username": "rita",
-//     "firstName": nombre,
-//     "lastName": apellido,
-//     "email": email,
-//     "password": contraseña,
-//     "phone": telefono,
-//     "userStatus": 1
-// };
+const datos = {
+    "id": 2,
+    "username": usuario,
+    "firstName": "nombre",
+    "lastName": "apellido",
+    "email": "email",
+    "password": pass,
+    "phone": "telefono",
+    "userStatus": 1
+};
 
-// async function postData(datos) {
-//     await fetch('https://petstore.swagger.io/v2/user', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'accept': 'application/json'
-//         },
-//         body: JSON.stringify(datos)
-//     }).catch(error => {
-//         {
-//             alert("Error, el usuario especificado ya existe "+error);
-//         }
-//     })
-//         .then(response => response.json());
-// }
+async function postData(datos) {
+    await fetch('https://petstore.swagger.io/v2/user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+        },
+        body: JSON.stringify(datos)
+    }).catch(error => {
+        {
+            alert("Error, el usuario especificado ya existe " + error);
+        }
+    })
+        .then(response => response.json());
+}
 
 
 
