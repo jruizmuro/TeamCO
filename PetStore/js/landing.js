@@ -98,7 +98,7 @@ function creaDivAPI(tipo) {
                 })
                 pCat.appendChild(document.createTextNode(categoria));
                 if (tipo === 'available') {
-                    pStatus.appendChild(document.createTextNode("Avaiable"));
+                    pStatus.appendChild(document.createTextNode("Available"));
                 } else if (tipo === 'pending') {
                     pStatus.appendChild(document.createTextNode("Pending"));
                 } else {

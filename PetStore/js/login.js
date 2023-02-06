@@ -1,21 +1,22 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const form = document.getElementById('formulario');
-    form.addEventListener('submit', async (event) => {
+    form.addEventListener('submit', (event) => {
         const usuario = document.getElementById("usuario").value;
         const pass = document.getElementById("pass").value;
 
         sessionStorage.setItem("user", usuario);
-
-        await fetch('https://petstore.swagger.io/v2/user/login?username=' + usuario + '&password=' + pass, {
+        event.preventDefault();
+        event.stopPropagation();
+        fetch('https://petstore.swagger.io/v2/user/login?username=' + usuario + '&password=' + pass, {
             method: 'GET',
         }).catch(res => console.log(res))
             .then(x => x.json())
             .then(x => {
-                if (x.code == 200) {
-                    this.location.href = "/index.html";
+                if (x.code === 200) {
+                    form.submit();
                 }
             });
 
