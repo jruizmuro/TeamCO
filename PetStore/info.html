@@ -57,9 +57,13 @@
             <div class="position-relative">
                 <button type="button" class="btn btn-dark"><a href="./crear.html" style="color: white">Crear
                         mascota</a></button>
-                <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
-                <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-                <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
+                <button class="btn btn-success dropdown-toggle" id="nameUser" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button id="deleteUser" class="dropdown-item">Borrar Usuario</button></li>
+                    <li><button id="closeSession" class="dropdown-item">Cerrar Sesión</button></li>
+                </ul>
             </div>
 
         </div>
@@ -212,6 +216,7 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
+    <script src="js/landing.js" type="module"></script>
     <script src="assets/js/main.js"></script>
 
 </body>

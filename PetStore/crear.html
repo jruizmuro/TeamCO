@@ -41,7 +41,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body id="paco">
 
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center fixed-top">
@@ -54,9 +54,13 @@
             </a>
 
             <div class="position-relative">
-                <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
-                <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-                <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
+                <button class="btn btn-success dropdown-toggle" id="nameUser" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button id="deleteUser" class="dropdown-item">Borrar Usuario</button></li>
+                    <li><button id="closeSession" class="dropdown-item">Cerrar Sesión</button></li>
+                </ul>
             </div>
 
         </div>
@@ -159,6 +163,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="js/landing.js" type="module"></script>
 
 </body>
 
