@@ -59,7 +59,7 @@
     <main id="main">
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
-         
+
             <div class="container" data-aos="fade-up">
                 <div>
                     <figure>
@@ -96,33 +96,33 @@
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <label for="name">Nombre </label>
+                                    <label for="name" style="color: red;">Nombre* </label>
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"
                                         required>
 
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <label for="surname"> Apellido</label>
+                                    <label for="surname" style="color: red;"> Apellido*</label>
                                     <input type="text" name="surname" class="form-control" id="surname"
                                         placeholder="Apellido" required>
 
                                 </div>
 
                                 <div class="col-md-6 form-group">
-                                    <label for="address">Dirección</label>
+                                    <label for="address" style="color: red;">Dirección*</label>
                                     <input type="text" name="address" class="form-control" id="address"
                                         placeholder="Dirección" required>
 
                                 </div>
 
                                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <label for="email">Email</label>
+                                    <label for="email" style="color: red;">Email*</label>
                                     <input type="email" class="form-control" name="email" id="email"
                                         placeholder=" Email" required>
 
                                 </div>
                                 <div class="form-group mt-3">
-                                    <label for="telefono">Telefono</label>
+                                    <label for="telefono" style="color: red;">Telefono*</label>
                                     <input type="tel" class="form-control" name="Telefono" id="telefono"
                                         pattern="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}" placeholder="Telefono"
                                         required>
@@ -130,13 +130,13 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <label for="subjet"> Asunto </label>
+                                <label for="subjet" style="color: red;"> Asunto* </label>
                                 <input type="text" class="form-control" name="subject" id="subject"
                                     placeholder="Subject" required>
 
                             </div>
                             <div class="form-group mt-3">
-                                <label for="texto"> Mensaje </label>
+                                <label for="texto" style="color: red;"> Mensaje* </label>
                                 <textarea class="form-control" name="message" rows="5" id="texto" placeholder="Message"
                                     required></textarea>
 
@@ -146,8 +146,11 @@
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                            <p>Para eviar tus datos de contacto y tu consulta pulsa en el boton que pone "Send Message"</p>
+                            <div class="text-center"><button style="background-color: green; color: white;"
+                                    type="submit">Send Message</button>
+                            </div>
+                            <p>Para eviar tus datos de contacto y tu consulta pulsa en el boton que pone "Send Message"
+                            </p>
                         </form>
 
                     </div>
