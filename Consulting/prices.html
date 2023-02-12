@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>TeamCO Bussiness Enterprise</title>
+    <title>Precios</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -31,7 +31,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <style>
         .bd-placeholder-img {
-            font-size: 1.125rem;
+            font-size: 1.125em;
             text-anchor: middle;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -40,9 +40,28 @@
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
-                font-size: 3.5rem;
+                font-size: 3.5em;
             }
         }
+        h4{
+            letter-spacing: 0.1em;
+        }
+        strong{
+            font-size: larger;
+        }
+        p { 
+            line-height: 150%; 
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .linkAccess{
+            color: rgb(15, 75, 254);
+        }
+        .linkAccess:hover{
+            color: rgb(173, 0, 0);
+        }
+        
     </style>
 </head>
 
@@ -52,21 +71,21 @@
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">TC<span>.</span></a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="index.html" tabindex="1">TC<span>.</span></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-                    <li><a class="nav-link scrollto" href="instalation.html">Instalaciones y empleados</a></li>
-                    <li><a class="nav-link scrollto" href="prices.html">Precios</a></li>
-                    <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="contact.html">Contacto</a></li>
+                    <li><a class="nav-link scrollto active" href="index.html" tabindex="2" lang="en">Home</a></li>
+                    <li><a class="nav-link scrollto" href="instalation.html" tabindex="3">Instalaciones y empleados</a></li>
+                    <li><a class="nav-link scrollto" href="prices.html" tabindex="4">Precios</a></li>
+                    <li><a class="nav-link scrollto" href="blog.html" tabindex="5">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="contact.html" tabindex="6">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-            <a href="prices.html" class="get-started-btn scrollto">Get Started</a>
+            <a href="prices.html" class="get-started-btn scrollto" tabindex="7" lang="en">Get Started</a>
 
         </div>
     </header><!-- End Header -->
@@ -78,7 +97,7 @@
 
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
             <h1 class="display-4 fw-normal mt-0">Precios de nuestros paquetes</h1>
-            <p class="fs-5 text-muted">Consulte nuestra lista de precios y elija el que mejor se adecue a sus
+            <p class="fs-5 text-muted" tabindex="8">Consulte nuestra lista de precios y elija el que mejor se adecue a sus
                 necesidades.</p>
         </div>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center p-5">
@@ -88,12 +107,12 @@
                         <h4 class="my-0 fw-normal">Simple</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$13<small class="text-muted fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">$13<small class="text-muted fw-light">/<abbr title="Mensual">m</abbr></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Este plan es ideal para una persona que no tenga que realizar muchas gestiones</li>
 
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-warning">Get started</button>
+                        <button type="button" class="w-100 btn btn-lg btn-warning" tabindex="9">Get started</button>
                     </div>
                 </div>
             </div>
@@ -103,24 +122,24 @@
                         <h4 class="my-0 fw-normal">Pro</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$33<small class="text-muted fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">$33<small class="text-muted fw-light">/<abbr title="Mensual">m</abbr></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li>Un plan ideal para clientes con empresas que necesiten hacer auditorias e informes</li>
+                            <li>Un plan ideal para clientes con empresas que necesiten hacer <a href="https://es.wikipedia.org/wiki/Auditor%C3%ADa" class="linkAccess">auditorias</a> e informes</li>
 
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-warning">Get started</button>
+                        <button type="button" class="w-100 btn btn-lg btn-warning" tabindex="10">Get started</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-warning">
                     <div class="card-header py-3 text-white bg-warning border-warning">
-                        <h4 class="my-0 fw-normal">Ultra Max Pro</h4>
+                        <h4 class="my-0 fw-normal text-dark">Ultra Max Pro</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$62<small class="text-muted fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">$62<small class="text-muted fw-light">/<abbr title="Mensual">m</abbr></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li>Este plan es ideal para clientes con empresas que necesiten auditorias y tengan coches
+                            <li>Este plan es ideal para clientes con empresas que necesiten <a href="https://es.wikipedia.org/wiki/Auditor%C3%ADa" class="linkAccess">auditorias</a> y tengan coches
                                 de empresa propios</li>
 
                         </ul>
@@ -135,73 +154,48 @@
                 <thead>
                     <tr>
                         <th style="width: 34%;"></th>
-                        <th style="width: 22%;">Simple</th>
-                        <th style="width: 22%;">Pro</th>
-                        <th style="width: 22%;">Ultra Max Pro</th>
+                        <th style="width: 22%;" tabindex="12">Simple</th>
+                        <th style="width: 22%;" tabindex="13">Pro</th>
+                        <th style="width: 22%;" tabindex="14">Ultra Max Pro</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row" class="text-start">Presentación de ofertas e informes</th>
                         <td>&#10003;</td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
                     </tr>
                     <tr>
-                        <th scope="row" class="text-start">Mantenimiento, actualización y renovación de pólizas</th>
+                        <th scope="row" class="text-start" >Mantenimiento, actualización y renovación de pólizas</th>
                         <td>&#10003;</td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
                     </tr>
-                </tbody>
-                <tbody>
+                
                     <tr>
                         <th scope="row" class="text-start">Estudio de productos y entidades aseguradoras</th>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg></td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
+                        <td></td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
                     </tr>
                     <tr>
                         <th scope="row" class="text-start">Auditoría de los seguros actuales</th>
                         <td></td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
                     </tr>
                     <tr>
                         <th scope="row" class="text-start">Gestión de siniestros</th>
                         <td></td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg></td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
+                        <td></td>
+                        <td>&#10003;</td>
                     </tr>
                     <tr>
-                        <th scope="row" class="text-start">Diseño de programas de seguros</th>
+                        <th scope="row" class="text-start" tabindex="15">Diseño de programas de seguros</th>
                         <td></td>
                         <td></td>
-                        <td><svg class="bi" width="24" height="24">
-                                <use xlink:href="#check" />
-                            </svg>&#10003;</td>
+                        <td>&#10003;</td>
                     </tr>
                 </tbody>
             </table>
@@ -224,11 +218,11 @@
                                 <strong>Email:</strong> teamco@enterprise.com<br>
                             </p>
                             <div class="social-links mt-3">
-                                <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
-                                <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
-                                <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
-                                <a href="" class="google-plus"><i class="bx bxl-skype"></i></a>
-                                <a href="" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                <a href="" class="twitter" tabindex="16"><i class="bx bxl-twitter"></i></a>
+                                <a href="" class="facebook" tabindex="17"><i class="bx bxl-facebook"></i></a>
+                                <a href="" class="instagram" tabindex="18"><i class="bx bxl-instagram"></i></a>
+                                <a href="" class="google-plus" tabindex="19"><i class="bx bxl-skype"></i></a>
+                                <a href="" class="linkedin" tabindex="20"><i class="bx bxl-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -236,32 +230,32 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Navegación</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Instalación y empleados</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Precios</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Blog</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Contacto</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="21" lang="en">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="22">Instalación y empleados</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="23">Precios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="24">Blog</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="25">Contacto</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Nuestros servicios</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios únicos para pymes</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Seguimiento económico personalizado</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="26">Servicios únicos para <abbr title="Pequeña y Mediana Empresa">pymes</abbr></a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="27">Seguimiento económico personalizado</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Asesoramiento financiero particular</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="28">Asesoramiento financiero particular</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Realización de auditorias contables</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="29">Realización de auditorias contables</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Acciones y créditos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" tabindex="30">Acciones y créditos</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Suscríbete a nuestro Newsletter</h4>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Suscribirse">
+                        <h4>Suscríbete a nuestro <span lang="en">Newsletter</span></h4>
+                        <form action="prices.html" method="post">
+                            <input type="email" name="email" id="email" tabindex="31"><input type="submit" value="Suscribirse">
                         </form>
 
                     </div>
@@ -270,7 +264,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" lang="en">
             <div class="copyright">
                 &copy; Copyright <strong><span>TeamCO</span></strong>. All Rights Reserved
             </div>
