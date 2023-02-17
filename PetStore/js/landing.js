@@ -2,10 +2,19 @@
 import { storeData, delUser } from "./main.js";
 document.addEventListener("DOMContentLoaded", function () {
     nameLog();
+    document.getElementById('btnCambio').onclick = function() {
+        var radios = document.getElementsByName('metodo');
+        for (var radio of radios)
+        {
+            if (radio.checked) {
+                alert(radio.value);
+            }
+        }
+    }
     creaDivAPI("available");
     creaDivAPI("pending");
     creaDivAPI("sold");
-
+    
 });
 
 document.getElementById("deleteUser").addEventListener("click", async function () {
@@ -20,7 +29,7 @@ document.getElementById("closeSession").addEventListener("click", function () {
 });
 
 
-function creaDivAPI(tipo) {
+function creaDivAPI(tipo, metodo) {
     const req = new XMLHttpRequest();
     let container = document.querySelector("#container");
     fetch("https://petstore.swagger.io/v2/pet/findByStatus?status=" + tipo)
