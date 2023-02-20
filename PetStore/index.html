@@ -51,7 +51,14 @@
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>PetShop Iturriaga</h1>
       </a>
-
+      <div id="metodoAlm">
+        <form action="index.html" method="get">
+        <label for="local">LocalStorage <input type="radio" name="metodo" value="localStorage"></label>
+        <label for="indexDB">IndexDB <input type="radio" name="metodo" value="indexDB"></label>
+        <label for="Session">SessionStorage <input type="radio" name="metodo" value="Session"></label>
+        <input type="submit" value="Cambiar" id="btnCambio" name="btnCambio">
+      </form>
+      </div>
       <div class="position-relative">
         <button type="button" class="btn btn-dark"><a href="./crear.html" style="color: white">Crear
             mascota</a></button>
