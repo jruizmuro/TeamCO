@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { getPets, getPetByID, insertPet, modifyPet, deletePet } from './pets.service.js';
-import { getUsers, getUserByID, modifyUser, deleteUser, insertUser } from './user.js';
+import { getUsers, getUserByID, modifyUser, deleteUser, insertUser } from './user.service.js';
 import bodyParser from 'body-parser';
 
 const app = express();
@@ -87,7 +87,7 @@ app.delete('/pets/:id', async (req, res) => {
 /* -----End Pet API----- */
 
 
-/* -----Start User----- API */
+/* -----Start User API----- */
 
 app.get('/users', async (req, res) => {
   res.status(200).json(await getUsers());
