@@ -2,12 +2,13 @@
 import { storeData, delUser } from "./main.js";
 document.addEventListener("DOMContentLoaded", function () {
     nameLog();
+    let metodo="";
     document.getElementById('btnCambio').onclick = function() {
         var radios = document.getElementsByName('metodo');
         for (var radio of radios)
         {
             if (radio.checked) {
-                alert(radio.value);
+                metodo=radio.value
             }
         }
     }
