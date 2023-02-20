@@ -68,4 +68,3 @@ export async function modifyPet(pet) {
   }
   return false;
 }
-
