@@ -14,6 +14,28 @@ export function storeData(id, url, name, categoria, tipo) {
 }
 
 
+export function storeDataLocal(id, url, name, categoria, tipo) {
+    let arrayDataLocal = getArrayDataLocal();
+    arrayDataLocal.push({
+        id: id,
+        photoUrls: url,
+        name: name,
+        category: categoria,
+        tipo: tipo,
+    });
+    localStorage.setItem("arrayDataLocal", JSON.stringify(arrayDataLocal));
+}
+
+
+export function getArrayDataLocal() {
+    let arrayDataLocal = localStorage.getItem("arrayDataLocal");
+    if (arrayDataLocal === null) {
+        return arrayDataLocal = [];
+    }
+    return arrayDataLocal = JSON.parse(arrayDataLocal);
+}
+
+
 export function getArrayData() {
     let arrayData = localStorage.getItem("arrayData");
     if (arrayData === null) {
@@ -24,29 +46,13 @@ export function getArrayData() {
 
 
 export async function delUser() {
-    const dataDeleteUser = {
-        "id": 0,
-        "username": "string",
-        "firstName": "string",
-        "lastName": "string",
-        "email": "string",
-        "password": "string",
-        "phone": "string",
-        "userStatus": 0
-    };
-    await fetch('https://petstore.swagger.io/v2/user', {
+    await fetch('http://localhost:7777/users/' + sessionStorage.getItem('idUser'), {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
             'accept': 'application/json'
-        },
-        body: JSON.stringify(dataDeleteUser)
-    }).catch(error => {
-        {
-            alert("Error, al eliminar el usuario " + error);
         }
-    })
-        .then(response => response.json());
+    }).catch(res => console.log(res));
 }
 
 

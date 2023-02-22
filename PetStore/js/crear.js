@@ -15,29 +15,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
         const categoria = document.querySelector("#validationCustom01").value;
         const dogName = document.querySelector("#validationCustom02").value;
-        const tags = document.querySelector('#tags-input').value;
-        const id = Math.trunc(Math.random() * 10000000000);
         const foto = document.querySelector("#validationCustom03").value;
 
         const pet = {
-            id: id,
-            category: {
-                id: 0,
-                name: categoria
-            },
+            category: categoria,
             name: dogName,
-            photoUrls: [
-                foto
-            ],
-            tags: [
-                {
-                    id: 0,
-                    name: tags
-                }
-            ],
-            status: "available"
+            photoUrls: foto,
+            tipo: "available"
         };
-        const data = await postData('https://petstore.swagger.io/v2/pet', pet);
+        const data = await postData('http://localhost:7777/pets', pet);
         console.log(data);
         form.submit();
     }, false);
