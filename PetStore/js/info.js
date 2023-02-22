@@ -32,29 +32,18 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
             const categoria = document.querySelector("#validationCustom01").value;
             const dogName = document.querySelector("#validationCustom02").value;
-            const tags = document.querySelector('#tags-input').value;
             const foto = document.querySelector("#validationCustom03").value;
             const estado = document.querySelector("#estado-input").value;
 
             const pet = {
-                id: getArrayData()[0].id,
-                category: {
-                    id: 0,
-                    name: categoria
-                },
+
+                category: categoria,
                 name: dogName,
-                photoUrls: [
-                    foto
-                ],
-                tags: [
-                    {
-                        id: 0,
-                        name: tags
-                    }
-                ],
-                status: estado
+                photoUrls: foto,
+                tipo: estado,
+                id: getArrayData()[0].id
             };
-            const data = await putData('https://petstore.swagger.io/v2/pet', pet);
+            const data = await putData('http://localhost:7777/pets/' + getArrayData()[0].id, pet);
             console.log(data);
             form.submit();
         }, false);
@@ -81,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     async function deleteData() {
-        await fetch('https://petstore.swagger.io/v2/pet/' + getArrayData()[0].id, {
+        await fetch('http://localhost:7777/pets/' + getArrayData()[0].id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -91,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     async function getData() {
-        return await fetch('https://petstore.swagger.io/v2/pet/' + getArrayData()[0].id, {
+        return await fetch('http://localhost:7777/pets/' + getArrayData()[0].id, {
             method: 'GET',
 
         }).catch(res => console.log(res)).then(x => x.json());
