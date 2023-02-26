@@ -35,6 +35,28 @@ export function getArrayDataLocal() {
     return arrayDataLocal = JSON.parse(arrayDataLocal);
 }
 
+export function storeDataSession(id, url, name, categoria, tipo) {
+    let arrayDataSession = getArrayDataSession();
+    arrayDataSession.push({
+        id: id,
+        photoUrls: url,
+        name: name,
+        category: categoria,
+        tipo: tipo,
+    });
+    sessionStorage.setItem("arrayDataSession", JSON.stringify(arrayDataSession));
+}
+
+export function getArrayDataSession() {
+    let arrayDataSession = sessionStorage.getItem("arrayDataSession");
+    if (arrayDataSession === null) {
+        arrayDataSession = [];
+    } else {
+        arrayDataSession = JSON.parse(arrayDataSession);
+    }
+    return arrayDataSession;
+}
+
 
 export function getArrayData() {
     let arrayData = localStorage.getItem("arrayData");
