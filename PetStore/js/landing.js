@@ -49,13 +49,22 @@ async function creaDivAPI() {
 
 
     if (sessionStorage.getItem("metodo") === 'indexDB') {
-
+        
 
     }
 
 
     if (sessionStorage.getItem("metodo") === 'sessionStorage') {
-
+        await fetch("http://localhost:7777/pets")
+        .then((response) => response.json())
+        .then((data) => {
+            data.forEach(element => {
+                storeDataSession(element.id, element.photoUrls, element.name, element.category, element.tipo);
+            })
+        })
+    let arrayDataSession = getArrayDataSession();
+    arrayPets = arrayDataSession;
+    sessionStorage.removeItem('arrayDataSession');
 
     }
 
