@@ -49,7 +49,71 @@ async function creaDivAPI() {
 
 
     if (sessionStorage.getItem("metodo") === 'indexDB') {
-        
+        const indexedDB = window.indexedDB
+        let arrayData = [];
+        if (indexedDB) {
+            let db
+            const request = indexedDB.open('petsList', 1)
+
+            request.onsuccess = () => {
+                db = request.result
+                readData()
+            }
+
+            request.onupgradeneeded = (e) => {
+                db = e.target.result
+                const objectStore = db.createObjectStore('pets', {
+                    autoIncrement: true
+                })
+            }
+
+            request.onerror = (error) => {
+                console.log('Error', error)
+            }
+
+            const addData = (data) => {
+                const transaction = db.transaction(['pets'], 'readwrite')
+                const objectStore = transaction.objectStore('pets')
+                const request = objectStore.add(data)
+                
+            }
+
+            await fetch("http://localhost:7777/pets")
+            .then((response) => response.json())
+            .then((data) => {
+                data.forEach(element => {
+                    const data = {
+                        id: element.id,
+                        url: element.photoUrls,
+                        name: element.name,
+                        categoria: element.categoria,
+                        tipo: element.tipo
+                    }
+                    addData(data);
+                })
+
+            })
+
+            const readData = () => {
+                const transaction = db.transaction(['pets'], 'readonly')
+                const objectStore = transaction.objectStore('pets')
+                const request = objectStore.openCursor()
+                request.onsuccess = (e) => {
+                    const cursor = e.target.result
+                    if (cursor) {
+                        arrayData.push({
+                            id: cursor.value.id,
+                            url: cursor.value.url,
+                            name: cursor.value.name,
+                            categoria: cursor.value.categoria,
+                            tipo: cursor.value.tipo
+                        })
+                        cursor.continue();
+                    }
+                }
+            }
+
+        }
 
     }
 
